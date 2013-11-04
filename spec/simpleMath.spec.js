@@ -57,3 +57,17 @@ test("throwing an error when calculating the factorial for a negative number", f
 	equal(this.simpleMath.getAverage(-10,25), 7.5,"result 7")
 });
 
+/*=================isPrime====================*/
+module("assertions",{
+	setup:function(){
+		assertion = new Assertion();
+		isPrime = assertion.isPrime;
+
+	}, teardown: function(){
+		delete this.simpleMath;
+	}
+});
+
+test('isPrime positive number', function(){
+	isPrime(7, "7 is prime?");
+});
