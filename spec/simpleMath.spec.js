@@ -1,3 +1,4 @@
+/*=======================factorial==============================*/
 module("Factorial",{
 	setup:function(){
 		this.simpleMath = new SimpleMath();
@@ -17,3 +18,42 @@ test("throwing an error when calculating the factorial for a negative number", f
 		this.simpleMath.getFactorial(-10);
 	}, "bla bla bla")
 });
+
+/*=================signum====================*/
+module("signum",{
+	setup:function(){
+		this.simpleMath = new SimpleMath();
+	}, teardown: function(){
+		delete this.simpleMath;
+	}
+});
+
+test("calculating factorial for a positive number", function(){
+	equal(this.simpleMath.getSignum(10), 1,  " result 1")
+});
+test("calculating factorial for zero", function(){
+	equal(this.simpleMath.getSignum(0), 0,"result 0")
+});
+test("throwing an error when calculating the factorial for a negative number", function(){
+	equal(this.simpleMath.getSignum(-10), -1,"result -1")
+});
+
+/*=================average====================*/
+module("average",{
+	setup:function(){
+		this.simpleMath = new SimpleMath();
+	}, teardown: function(){
+		delete this.simpleMath;
+	}
+});
+
+test("calculating factorial for a positive number", function(){
+	equal(this.simpleMath.getAverage(15,3), 9,  " result 9")
+});
+test("calculating factorial for zero", function(){
+	equal(this.simpleMath.getAverage(0,0), 0,"result 0")
+});
+test("throwing an error when calculating the factorial for a negative number", function(){
+	equal(this.simpleMath.getAverage(-10,25), 7.5,"result 7")
+});
+

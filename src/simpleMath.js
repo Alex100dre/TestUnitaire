@@ -12,11 +12,18 @@ SimpleMath.prototype.getFactorial = function(number){
 	}
 };
 
-SimpleMath.prototype.signum = function(number){
-
+SimpleMath.prototype.getSignum = function(number){
+	if(number>0){
+		return 1;
+	}else if(number == 0){
+		return 0;
+	}else{
+		return -1;
+	}
 };
 
-SimpleMath.prototype.average = function(number1,number2){
-
+SimpleMath.prototype.getAverage = function(number1,number2){
+	var result = (number1+number2)*0.5;
+	return result;
 };
 
